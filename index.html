@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+    <script defer src="main.js"></script>
+    <title>Overwatch Heroes</title>
+</head>
+<body>
+    <div id="app">
+        <h1>{{ title }}</h1>
+        <div class="heroes">
+            <div v-for="index in length"
+                 :key="index" 
+                 class="hero">
+                <img :src="`https://raw.githubusercontent.com/ParkYoungWoong/overwatch-hero-selector-vanilla/master/images/hero${index}.png`" alt="HERO!">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
